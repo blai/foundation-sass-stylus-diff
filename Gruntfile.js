@@ -50,5 +50,5 @@ exports = module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'stylus', 'compass']);
+  grunt.registerTask('default', ['clean', 'compass', 'stylus']);
 };
