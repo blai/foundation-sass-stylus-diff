@@ -5,6 +5,7 @@ exports = module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-exec');
 
   // Project configuration.
   grunt.initConfig({
@@ -23,7 +24,8 @@ exports = module.exports = function(grunt) {
           sassDir: 'sass',
           cssDir: 'dist/scss',
           outputStyle: 'expanded',
-          debugInfo: false
+          debugInfo: false,
+          noLineComments: true
         }
       }
     },
@@ -41,6 +43,12 @@ exports = module.exports = function(grunt) {
         files: {
           'dist/stylus/app.css': 'stylus/app.styl'
         }
+      }
+    },
+
+    exec: {
+      diff: {
+        command: 'diff -w dist/scss/app.css dist/stylus/app.css > css.diff'
       }
     },
 
