@@ -1285,6 +1285,10 @@ dl {
   list-style-position: outside;
   font-family: inherit;
 }
+ul,
+ol {
+  margin-left: 1.25em;
+}
 ul li ul,
 ul li ol {
   margin-left: 1.25em;
@@ -3528,6 +3532,7 @@ form.custom .custom.disabled {
 }
 .top-bar .title-area {
   position: relative;
+  margin: 0;
 }
 .top-bar .name {
   height: 45px;
@@ -3701,6 +3706,7 @@ form.custom .custom.disabled {
 }
 .top-bar-section .dropdown li {
   width: 100%;
+  height: auto;
 }
 .top-bar-section .dropdown li a {
   font-weight: normal;
@@ -4700,7 +4706,7 @@ kbd {
   border-width: 1px;
   margin: 0;
   font-family: "Consolas", "Menlo", "Courier", monospace;
-  font-size: 0.9375em;
+  font-size: 0.875em;
   padding: 0.125em 0.25em 0em;
   -webkit-border-radius: 3px;
   border-radius: 3px;
